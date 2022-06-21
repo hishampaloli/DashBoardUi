@@ -9,27 +9,20 @@ import DoDisturbOnIcon from '@mui/icons-material/DoDisturbOn';
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
-  const [input, setInput] = useState(false);
   const [nav, setNav] = useState(false)
   return (
     <div className="header">
       <div className="header-row2">
         <div className="header-row2-left">
-        <img style={{width: '100px', marginLeft:'15px'}} src="https://www.beautyplayers.com/public/uploads/all/BccpSvTQNP9tyqglx5bhqqzUXMUt9R6A09QoqxGe.png" alt="" />
-        {input ? 
-          <input type="text" className="input" placeholder="I am shopping for..." /> : (<div className="div" onClick={(e) => setInput(true)}>
-          <div className="div-left " >
+        <img style={{width: '100px', marginLeft:'15px'}} className='lg-img' src="https://www.beautyplayers.com/public/uploads/all/BccpSvTQNP9tyqglx5bhqqzUXMUt9R6A09QoqxGe.png" alt="" />
+        <div className="div-left " >
         <LocationOnIcon style={{color: ' rgba(141, 8, 70, 0.815)', marginRight:'10px'}} />
           <div>
           <p>Delhi</p>
       <p className="p-n" >GT Road Shahdara, East Delhi <ArrowDropDownIcon /></p>
           </div>
           </div>
-          <div className="div-right">
-            <SearchIcon style={{color: 'rgb(81, 81, 81)'}} />
-          <input type="text" placeholder="I am shopping for..." />
-          </div>
-          </div>)}
+          <input type="text" className="input" placeholder="I am shopping for..." /> 
           
         </div>
 
