@@ -1,45 +1,15 @@
 .header {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-
-.header-row1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
-    color: rgba(0, 0, 0, 0.381);
-    background-color: white;
+.menu-ic {
+    display: none;
 }
-
-.noti {
-    color: rgba(0, 0, 0, 0.763);
-}
-.header-row1-left  {
-    display: flex;
-    list-style: none;
-}
-
-.header-row1-right  {
-    display: flex;
-    list-style: none;
-}
-
-.header-row1-left li {
-    padding:  5px;
-}
-
-.header-row1-right li {
-    display: flex;
-    border-left: 1px solid lightgray;
-    padding: 1px 10px;
-}
-
 .header-row2 {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(235, 235, 235);
     background-color: white;
@@ -56,8 +26,11 @@
     width: 650px;
     display: flex;
     border: 1px solid lightgray;
-    color: white;
-    margin-left: 20px
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 9px;
+    height: 50px;
+    justify-content: space-around;
 }
 .hd-ic {
     margin-right: 5px;
@@ -66,10 +39,28 @@
 .src-ic {padding: 10px;
     background-color: #e62e04;;
 }
+.input {
+
+    width: 650px;
+    border: 1px solid lightgray;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 9px;
+    height: 50px;
+    justify-content: space-around;
+}
 
 .header-row2-left .div input {
     width: 100%;
     padding: 5px;
+    border-radius: 15px;
+}
+
+.div-right {
+    width: 50%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -80,17 +71,122 @@
 
 .header-row2-right li{
     margin: 10px 10px;
-}
-.header-row3 {
     display: flex;
-    justify-content: center;
-    border-bottom: 1px solid lightgray;
-    background-color: white;
-    box-shadow: 2px 2px 5px rgb(225, 225, 225);
 }
 
-.header-row3 li {
-    list-style: none;
-    color: rgb(146, 156, 164);
-    margin: 10px;
+.header-row2-right li p {
+    font-size: 11px;
+}
+.header-row2-right li strong {
+    white-space: nowrap;
+}
+
+.div-left {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-right: 1px solid rgb(109, 109, 109);
+    padding-right: 15px;
+    width: 50%;
+
+}
+
+.div-left p {
+    font-size: 13px;
+    color: rgb(81, 81, 81);
+}
+
+.div-left .p-n {
+    font-size: 9px;
+    color: rgb(81, 81, 81);
+}
+
+.close {
+    transition: .5s ease-in;
+    transform: translateX(200%);
+}
+
+.open {
+    transition: .5s ease-out;
+    transform: translateX(0%);
+}
+
+@media (max-width:900px) {
+    .header-row2-right {
+        position: fixed;
+        width: 200px;
+        background-color: rgb(141, 8, 70);
+        height: 100vh;
+        top: 0;
+        flex-direction: column;
+        z-index: 2;
+        color: aliceblue;
+        right: 0;
+        padding-top: 30px;
+    }
+    .header-row2-right li {
+        padding: 4px 10px;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition: .3s ease;
+    }
+    .menu-ic-close{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transition:transform .5s ease;
+    }
+
+    .menu-ic-close:hover {
+        transition: .5s ease;
+        transform: rotate(180deg);
+    }
+    .header-row2-right li:hover {
+        background-color: white;
+        color: rgb(141, 8, 70);
+    }
+
+    .header-row2-right li:hover > .hd-ic {
+        color: rgb(141, 8, 70);
+    }
+    .hd-ic {
+        color: white;
+    }
+    .menu-ic {
+        display: flex;
+        transition: all .3s ease;
+        color: rgba(0, 0, 0, 0.587);
+    }
+    .menu-ic:hover {
+        color: black;
+        transform: scale(1.1);
+        transition: all .3s ease;
+    }
+    .header-row2 {
+        justify-content: space-between;
+    }
+    
+    .div-left {
+        width: 70%;
+    }
+    .div-left .p-n {
+        white-space: nowrap;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    .div-left p {
+        font-size: 10px;
+        color: rgb(81, 81, 81);
+    }
+    .div-left {
+        width: 90%;
+    }
+    .div-left .p-n {
+        font-size: 6px;
+        white-space: nowrap;
+        color: rgb(81, 81, 81);
+    }
 }

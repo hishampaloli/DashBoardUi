@@ -66,24 +66,6 @@ function MainTab() {
     },
   ];
 
-  const dataDown = [
-    {
-      logo: <PostAddIcon className="rd" fontSize="large"/>,
-      text: 'Terms & Contitions'
-    },
-    {
-      logo: <KeyboardReturnIcon className="rd" fontSize="large" />,
-      text: 'Return Policy'
-    },
-    {
-      logo: <NoiseAwareIcon className="rd" fontSize="large" />,
-      text: 'Support Policy'
-    },
-    {
-      logo: <WarningAmberIcon className="rd" fontSize="large" />,
-      text: 'Terms & Contitions'
-    },
-  ]
   return (
     <div className="main">
 
@@ -175,16 +157,6 @@ function MainTab() {
 
       
     </div>
-
-      <div className="down">
-      {dataDown.map(item => {
-        return <div className="down-card">
-          {item.logo}
-          <h1>{item.text}</h1>
-        </div>
-      })}
-        
-      </div>
     </div>
   );
 }
