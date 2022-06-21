@@ -101,15 +101,7 @@
     color: rgb(81, 81, 81);
 }
 
-.close {
-    transition: .5s ease-in;
-    transform: translateX(200%);
-}
 
-.open {
-    transition: .5s ease-out;
-    transform: translateX(0%);
-}
 
 @media (max-width:900px) {
     .header-row2-right {
@@ -123,6 +115,15 @@
         color: aliceblue;
         right: 0;
         padding-top: 30px;
+    }
+    .close {
+        transition: .5s ease-in;
+        transform: translateX(200%);
+    }
+    
+    .open {
+        transition: .5s ease-out;
+        transform: translateX(0%);
     }
     .header-row2-right li {
         padding: 4px 10px;
