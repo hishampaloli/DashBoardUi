@@ -9,6 +9,13 @@ import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn";
 import MenuIcon from "@mui/icons-material/Menu";import Switch from '@mui/material/Switch';
 import { alpha, styled } from '@mui/material/styles';
 import { pink } from '@mui/material/colors';
+import PaidIcon from '@mui/icons-material/Paid';
+import PersonIcon from '@mui/icons-material/Person';
+import AppShortcutIcon from '@mui/icons-material/AppShortcut';
+import cart from './imag/header icons/CART.png'
+import coupon from './imag/header icons/coupons.png'
+import login from './imag/signup.png'
+import expert from './imag/header icons/NEARBY.png'
 
 
 const GreenSwitch = styled(Switch)(({ theme }) => ({
@@ -44,31 +51,21 @@ function Header() {
           alt=""
         />
         <div className="header-row2-left">
-          <div className="div-left ">
-            <LocationOnIcon
-              style={{ color: " rgba(141, 8, 70, 0.815)", marginRight: "10px" }}
-            />
-            <div>
-              <p>Delhi</p>
-              <p className="p-n">
-                GT Road Shahdara, East Delhi <ArrowDropDownIcon />
-              </p>
-            </div>
-          </div>
+        <div className="switch-btn" >
+        <h3 className={delivery ? 'red' : 'grey'}>BOOK</h3>
+<GreenSwitch {...label} defaultChecked  onClick={() => {delivery ? setDelivery(false): setDelivery(true)}}/>
+<p className={!delivery ? 'red' : 'grey'}>RESELL</p>
+        </div>
           <input
             type="text"
             className="input"
-            placeholder="I am shopping for..."
+            placeholder="Search for Services..."
           />
           
           </div>
         </div>
 
-        <div className="switch-btn">
-        <h3>Dine-In</h3>
-<GreenSwitch {...label} defaultChecked />
-<p>Delivery</p>
-        </div>
+        
 </div>
         <div
           className={nav ? "header-row2-right open" : "header-row2-right close"}
@@ -79,29 +76,28 @@ function Header() {
               setNav(false);
             }}
           />
+
+          <ul>
+           
           <li>
-            <NotificationsNoneIcon className="hd-ic" />
+          <img src={expert} className="hd-ic" alt="" />
+              Nearby  <strong style={{marginLeft:'5px'}}>Experts</strong>  
+          </li>
+          
+          <li style={{marginRight: '10px'}}>
+          <img src={coupon} className="hd-ic" alt="" />
+               Coupons
+          </li>
+          <li style={{marginRight: '15px',marginLeft:'28px'}}>
+          <img src={login} className="hd-ic" alt="" />
+            Login
           </li>
           <li>
-            <p>
-              Hello,hisham <br />
-              <strong>
-                {" "}
-                Accounts & details <ArrowDropDownIcon />
-              </strong>{" "}
-            </p>
-          </li>
-          <li>
-            <p>
-              Upcomming
-              <br />
-              <strong>Appointments</strong>{" "}
-            </p>
-          </li>
-          <li>
-            <AddShoppingCartIcon className="hd-ic" on />
+          
+          <img src={cart} className="hd-ic" alt="" srcset="" />
             Cart
           </li>
+          </ul>
         </div>
         <div>
           <MenuIcon
@@ -129,7 +125,7 @@ function Header() {
             type="text"
             className="input"
             style={{width:'260px'}}
-            placeholder="I am shopping for..."
+            placeholder="Search for Services . . ."
           /> : ( <div>
           <div className="div-left-sm ">
             <LocationOnIcon
@@ -165,9 +161,9 @@ function Header() {
         </div>
 
         <div className="switch-btn">
-        <h3 className={delivery ? 'red' : 'grey'}>Dine-In</h3>
+        <h3 className={delivery ? 'red' : 'grey'}>BOOK</h3>
 <GreenSwitch {...label} defaultChecked  onClick={() => {delivery ? setDelivery(false): setDelivery(true)}}/>
-<p className={!delivery ? 'red' : 'grey'}>Delivery</p>
+<p className={!delivery ? 'red' : 'grey'}>RESELL</p>
         </div>
 
         <div
@@ -179,29 +175,27 @@ function Header() {
               setNav(false);
             }}
           />
-          <li>
-            <NotificationsNoneIcon className="hd-ic" />
-          </li>
-          <li>
-            <p>
-              Hello,hisham <br />
-              <strong>
-                {" "}
-                Accounts & details <ArrowDropDownIcon />
-              </strong>{" "}
-            </p>
-          </li>
-          <li>
-            <p>
-              Upcomming
-              <br />
-              <strong>Appointments</strong>{" "}
-            </p>
-          </li>
-          <li>
-            <AddShoppingCartIcon className="hd-ic" on />
-            Cart
-          </li>
+          <ul style={{display:'flex', flexDirection:'column'}}>
+           
+           <li>
+           <img src={expert} className="hd-ic" alt="" />
+               Nearby  <strong style={{marginLeft:'5px'}}>Experts</strong>  
+           </li>
+           
+           <li style={{marginRight: '10px'}}>
+           <img src={coupon} className="hd-ic" alt="" />
+                Coupons
+           </li>
+           <li style={{marginRight: '15px',marginLeft:'28px'}}>
+           <img src={login} className="hd-ic" alt="" />
+             Login
+           </li>
+           <li>
+           
+           <img src={cart} className="hd-ic" alt="" srcset="" />
+             Cart
+           </li>
+           </ul>
         </div>
 
 

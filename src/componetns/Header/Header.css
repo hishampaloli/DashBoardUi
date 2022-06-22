@@ -20,12 +20,10 @@
 .switch-btn {
     display: flex;
     font-size: small;
-    min-width: 400px;
     margin-top: 5px;
     align-items: center;
     justify-content: center;
     padding: 7px 20px;
-    border: 1px solid lightgray;
     border-radius: 50px;
 }
 
@@ -36,7 +34,7 @@
 .header-row2 {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(235, 235, 235);
     background-color: white;
@@ -51,6 +49,7 @@
 }
 .hd-ic {
     margin-right: 5px;
+    width: 30px;
     color: #e62e04;
 }
 .src-ic {padding: 10px;
@@ -72,15 +71,18 @@
     width: 26%;
     list-style: none;
 }
-
-.header-row2-right li{
-    margin: 10px 5px;
+.header-row2-right ul {
     display: flex;
 }
 
-.header-row2-right li p {
-    font-size: 11px;
+.header-row2-right li{
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
 }
+
+
 .header-row2-right li strong {
     white-space: nowrap;
 }
@@ -162,6 +164,9 @@
         top: 10px;
         left: 10px;
         transition:transform .5s ease;
+    }
+    .switch-btn {
+        min-width: 400px;
     }
 
     .menu-ic-close:hover {
