@@ -8,6 +8,7 @@ import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import NoiseAwareIcon from '@mui/icons-material/NoiseAware';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import Tab1 from "../../componetns/Tab1/Tab1";
+import Tab2 from "../../componetns/Tab2/Tab2";
 
 function MainTab() {
 
@@ -56,7 +57,7 @@ function MainTab() {
         </div>
       </div>
 
-     {right === 'dash' ? <Tab1 /> : <h1>eee</h1> }
+     {right === 'dash' ? <Tab1 /> : right === 'pur' ? <Tab2 /> : <h1>eee</h1> }
       
     </div>
     </div>

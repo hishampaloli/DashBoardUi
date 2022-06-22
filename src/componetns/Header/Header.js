@@ -81,21 +81,21 @@ function Header() {
            
           <li>
           <img src={expert} className="hd-ic" alt="" />
-              Nearby  <strong style={{marginLeft:'5px'}}>Experts</strong>  
+                <strong > Nearby Experts</strong>  
           </li>
           
           <li style={{marginRight: '10px'}}>
           <img src={coupon} className="hd-ic" alt="" />
-               Coupons
+              <strong>Coupons</strong> 
           </li>
           <li style={{marginRight: '15px',marginLeft:'28px'}}>
           <img src={login} className="hd-ic" alt="" />
-            Login
+            <strong> Login</strong>
           </li>
           <li>
           
           <img src={cart} className="hd-ic" alt="" srcset="" />
-            Cart
+            <strong> Cart</strong>
           </li>
           </ul>
         </div>
@@ -113,7 +113,7 @@ function Header() {
       <div className="small-1" style={{display:'flex',alignItems:'center', justifyContent: 'space-between', width:'100%'}}>
         <div className="sm-left">
           <img
-            style={{ width: "100px", marginLeft: "15px" }}
+            style={{ minWidth: "100px", marginLeft: "15px" }}
             className="lg-img"
             src="https://www.beautyplayers.com/public/uploads/all/BccpSvTQNP9tyqglx5bhqqzUXMUt9R6A09QoqxGe.png"
             alt=""
@@ -124,7 +124,6 @@ function Header() {
         {search ? <input
             type="text"
             className="input"
-            style={{width:'260px'}}
             placeholder="Search for Services . . ."
           /> : ( <div>
           <div className="div-left-sm ">

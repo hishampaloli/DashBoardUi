@@ -5,7 +5,9 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import FooterLogo from "./footer-logo.png";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Payment from "./payment.png";
+import './Footer.css'
 
 interface Navigation {
   name: string;
@@ -31,9 +33,9 @@ const secondNavigation: Navigation[] = [
 
 export default function Footer() {
   return (
-    <div className="max-w-full bg-gray-900 pt-7 text-white px-0 text-xs font-light">
-      <div className="px-8 py-10 w-full lg:grid-cols-12 grid gap-2 md:grid-cols-2 grid-cols-1 container mx-auto">
-        <div className="flex flex-col flex-1 space-y-4 col-span-5">
+    <div className="  bg-gray-900 pt-7 text-white px-0 text-xs font-light">
+      <div className=" full container mx-auto">
+        <div className="flex flex-col flex-1 space-y-4 col-span-5 md:mr-10 lth">
           <img src={FooterLogo} alt="Footer logo" width="140px" />
           <div className="w-full">
             <form action="#" method="POST" className="flex w-80">
@@ -54,7 +56,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="flex flex-col flex-1 space-y-6 col-span-3" style={{fontFamily:'sans-serif'}}>
+        <div className="flex flex-col flex-1 space-y-6 col-span-3 close md:mr-10" style={{fontFamily:'sans-serif'}}>
           <span className="text-md font-semibold uppercase">Contact Info</span>
           <div className="flex flex-col">
             <span className="text-slate-400">Address:</span>
@@ -73,7 +75,7 @@ export default function Footer() {
             <p className="p-0 m-0">hello@beautyplayers.com</p>
           </div>
         </div>
-        <div className="flex flex-col flex-1 space-y-6 col-span-2" style={{fontFamily:'sans-serif'}}>
+        <div className="flex flex-col flex-1 space-y-6 col-span-2 close" style={{fontFamily:'sans-serif'}}>
           <span className="text-md font-semibold uppercase">
             Privacy Policy Page
           </span>
@@ -91,7 +93,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className="flex flex-col flex-1 space-y-6 col-span-2 " style={{fontFamily:'sans-serif'}}>
+        <div className="flex flex-col flex-1 space-y-6 col-span-2 close" style={{fontFamily:'sans-serif'}}>
           <span className="text-md font-semibold uppercase">My Account</span>
           <ul className="space-y-4 flex flex-col text-xs text-slate-400">
             {secondNavigation.map((item, index) => (
@@ -110,6 +112,12 @@ export default function Footer() {
           <button className="h-10 w-24 text-xs rounded bg-green-600 text-white hover:bg-pink-600 py-2 px-4 smooth-transition">
             Apply Now
           </button>
+        </div>
+        <div className="footer-small">
+        <div className="div-bt"><button> Contact Info<ArrowDropDownIcon /></button></div>
+        <div className="div-bt"><button>Privacy Policy Page <ArrowDropDownIcon /></button></div>
+        <div className="div-bt"><button>My Account <ArrowDropDownIcon /></button></div>
+        
         </div>
       </div>
       <div className="py-5 px-2" style={{ backgroundColor: "#0d111b" }}>
