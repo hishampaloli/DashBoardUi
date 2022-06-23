@@ -7,8 +7,12 @@ import FileDownload from "@mui/icons-material/FileDownload";
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 import NoiseAwareIcon from '@mui/icons-material/NoiseAware';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import Tab1 from "../../componetns/Tab1/Tab1";
 import Tab2 from "../../componetns/Tab2/Tab2";
+import Tab3 from "../../componetns/Tab3/Tab3";
+import Tab4 from "../../componetns/Tab4/Tab4";
+import Tab5 from "../../componetns/Tab5/Tab5";
 
 function MainTab() {
 
@@ -38,26 +42,23 @@ function MainTab() {
               <PostAddIcon  className="nav-ic" />
               Purchase{" "}
             </li>
-            <li>
-              <FileDownload  className="nav-ic" />
-              File
+            <li onClick={(e) => {setRight('aff')}}>
+              <MonetizationOnIcon  className="nav-ic" />
+              Affiliate Stats
             </li>
-            <li>
-              <HomeIcon  className="nav-ic" /> dashboard
+            <li onClick={(e) => {setRight('pay')}}>
+              <MonetizationOnIcon  className="nav-ic" />
+              Affiliate History
             </li>
-            <li>
+            <li onClick={(e) => {setRight('req')}}>
               <PostAddIcon  className="nav-ic" />
-              Purchase{" "}
-            </li>
-            <li>
-              <FileDownload  className="nav-ic" />
-              File
+              Withdraw request
             </li>
           </ul>
         </div>
       </div>
 
-     {right === 'dash' ? <Tab1 /> : right === 'pur' ? <Tab2 /> : <h1>eee</h1> }
+     {right === 'dash' ? <Tab1 /> : right === 'pur' ? <Tab2 /> :  right === 'aff' ? <Tab3 /> :  right === 'pay' ? <Tab4 /> :  right === 'req' ? <Tab5 /> :<h1>eee</h1> }
       
     </div>
     </div>

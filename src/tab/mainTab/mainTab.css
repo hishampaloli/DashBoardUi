@@ -124,6 +124,10 @@
     width: 100%;
     justify-content: space-between;
 }
+.ad-ico {
+    color: rgb(255, 154, 154);
+    margin-right: 10px;
+}
 
 .detail-card {
     width: 48%;
